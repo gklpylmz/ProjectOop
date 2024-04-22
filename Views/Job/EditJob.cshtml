@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Job
+@{
+    ViewData["Title"] = "EditJob";
+    Layout = "~/Views/Shared/_CoreLayout.cshtml";
+}
+
+<h1>Meslek Düzenle</h1>
+<br />
+<form method="post" asp-action="EditJob" asp-controller="Job">
+    <div class="form-group">
+        <input type="hidden" asp-for="JobID" class="form-control">
+        <label for="email">Meslek Adı</label>
+        <input type="text" asp-for="JobName" class="form-control" id="email">
+        <span asp-validation-for="JobName"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-outline-success">Güncelle</button>
+</form>
+
